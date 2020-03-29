@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+
+    {% if categories_list %}
+        {% for cat in categories_list %}
+            <h3><a href="{% url 'api:category_details' cat.id %}">{{cat.name}}</a></h3><br><br>
+        {% endfor %}
+    {% else %}
+        NO CATEGORIES(((
+    {% endif %}
+
+{% endblock %}

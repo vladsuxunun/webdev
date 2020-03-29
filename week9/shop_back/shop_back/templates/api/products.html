@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+    {% if products_list %}
+        {% for prod in products_list %}
+            <h3><a href="{% url 'api:product_details' prod.id %}">{{prod.name}}</a></h3><br><br>
+        {% endfor %}
+    {% else %}
+        NO PRODUCTS(((
+    {% endif %}
+
+{% endblock %}

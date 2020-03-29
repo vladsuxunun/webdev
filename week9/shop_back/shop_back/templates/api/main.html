@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Choosing panel{% endblock %}
+
+{% block content %}
+
+    <h2><a href="{% url 'api:categories' %}">Categories</a></h2><br><br>
+    <h2><a href="{% url 'api:products' %}">Products</a></h2>
+
+{% endblock %}

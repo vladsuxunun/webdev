@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}PRODUCTS{% endblock %}
+
+{% block content %}
+     {% if categories_products %}
+          {% for prod in categories_products %}
+
+                     <h2><a href = "{% url 'api:product_details' prod.id %}">{{prod.name}}</a></h2><br><br>
+
+
+          {% endfor %}
+     {% else %}
+          No products yet!
+     {% endif %}
+{% endblock %}
